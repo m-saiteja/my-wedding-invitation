@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Nischitartham (Engagement) Invitation: Chi. Sai Teja &amp; Chi. La. Sow. Bhagya Sree. Join us in celebrating this traditional Telugu auspicious beginning!">
+    <title>Engagement Invitation | Sai Teja &amp; Bhagya Sree</title>
+
+    <!-- Link to Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon (Rings Exchange Icon) -->
+    <link rel="icon" type="image/png" href="assets/images/rings.png">
+</head>
+
+<body>
+
+    <!-- Mango Leaf and Marigold Flower Garland (Toran) -->
+    <div class="toran-container">
+        <svg class="toran-svg" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Garland Thread -->
+            <path d="M 0,10 Q 180,35 360,10 Q 540,35 720,10 Q 900,35 1080,10 Q 1260,35 1440,10" fill="none"
+                stroke="#D4AF37" stroke-width="3" />
+
+            <!-- Repeating Pattern: Mango Leaves & Banthi Poolu (Marigolds) -->
+            <!-- We will render multiple leaves and flowers spanning the width -->
+            <g id="toran-garlands">
+                <!-- Group 1 -->
+                <path d="M 80,15 C 80,15 70,45 80,50 C 90,45 80,15 80,15 Z" fill="#1E5631" />
+                <circle cx="80" cy="15" r="8" fill="#FDB813" />
+                <circle cx="80" cy="15" r="5" fill="#8D1C24" />
+
+                <!-- Group 2 -->
+                <path d="M 260,18 C 260,18 250,48 260,53 C 270,48 260,18 260,18 Z" fill="#1E5631" />
+                <circle cx="260" cy="18" r="8" fill="#FDB813" />
+                <circle cx="260" cy="18" r="5" fill="#8D1C24" />
+
+                <!-- Group 3 -->
+                <path d="M 440,18 C 440,18 430,48 440,53 C 450,48 440,18 440,18 Z" fill="#1E5631" />
+                <circle cx="440" cy="18" r="8" fill="#FDB813" />
+                <circle cx="440" cy="18" r="5" fill="#8D1C24" />
+
+                <!-- Group 4 -->
+                <path d="M 620,18 C 620,18 610,48 620,53 C 630,48 620,18 620,18 Z" fill="#1E5631" />
+                <circle cx="620" cy="18" r="8" fill="#FDB813" />
+                <circle cx="620" cy="18" r="5" fill="#8D1C24" />
+
+                <!-- Group 5 -->
+                <path d="M 800,18 C 800,18 790,48 800,53 C 810,48 800,18 800,18 Z" fill="#1E5631" />
+                <circle cx="800" cy="18" r="8" fill="#FDB813" />
+                <circle cx="800" cy="18" r="5" fill="#8D1C24" />
+
+                <!-- Group 6 -->
+                <path d="M 980,18 C 980,18 970,48 980,53 C 990,48 980,18 980,18 Z" fill="#1E5631" />
+                <circle cx="980" cy="18" r="8" fill="#FDB813" />
+                <circle cx="980" cy="18" r="5" fill="#8D1C24" />
+
+                <!-- Group 7 -->
+                <path d="M 1160,18 C 1160,18 1150,48 1160,53 C 1170,48 1160,18 1160,18 Z" fill="#1E5631" />
+                <circle cx="1160" cy="18" r="8" fill="#FDB813" />
+                <circle cx="1160" cy="18" r="5" fill="#8D1C24" />
+
+                <!-- Group 8 -->
+                <path d="M 1340,15 C 1340,15 1330,45 1340,50 C 1350,45 1340,15 1340,15 Z" fill="#1E5631" />
+                <circle cx="1340" cy="15" r="8" fill="#FDB813" />
+                <circle cx="1340" cy="15" r="5" fill="#8D1C24" />
+
+                <!-- Intermediate hanging flowers -->
+                <circle cx="170" cy="22" r="6" fill="#FDB813" />
+                <circle cx="170" cy="27" r="4" fill="#D4AF37" />
+
+                <circle cx="350" cy="24" r="6" fill="#FDB813" />
+                <circle cx="350" cy="29" r="4" fill="#D4AF37" />
+
+                <circle cx="530" cy="24" r="6" fill="#FDB813" />
+                <circle cx="530" cy="29" r="4" fill="#D4AF37" />
+
+                <circle cx="710" cy="24" r="6" fill="#FDB813" />
+                <circle cx="710" cy="29" r="4" fill="#D4AF37" />
+
+                <circle cx="890" cy="24" r="6" fill="#FDB813" />
+                <circle cx="890" cy="29" r="4" fill="#D4AF37" />
+
+                <circle cx="1070" cy="24" r="6" fill="#FDB813" />
+                <circle cx="1070" cy="29" r="4" fill="#D4AF37" />
+
+                <circle cx="1250" cy="22" r="6" fill="#FDB813" />
+                <circle cx="1250" cy="27" r="4" fill="#D4AF37" />
+            </g>
+        </svg>
+    </div>
+
+    <!-- Background Canvas for Falling Marigold Flowers -->
+    <canvas id="marigold-canvas"></canvas>
+
+
+
+    <!-- ==========================================================================
+       1. WELCOME SECTION (Sri Ganeshaya Namaha)
+       ========================================================================== -->
+    <section id="welcome-section">
+        <div class="container reveal-element active">
+            <div class="sacred-headers"
+                style="border-bottom: none; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <span class="sacred-word">శ్రీరస్తు</span>
+                <span class="sacred-word">శుభమస్తు</span>
+                <span class="sacred-word">అవిఘ్నమస్తు</span>
+            </div>
+
+            <!-- Sacred Ganesha Illustration Wrapper -->
+            <div class="ganesha-wrapper">
+                <img class="ganesha-img" src="assets/images/ganesha.png" alt="Lord Ganesha Welcome">
+            </div>
+
+            <div class="prayer-shloka">
+                శుక్లాంబరధరం విష్ణుం శశివర్ణం చతుర్భుజం |<br>
+                ప్రసన్నవదనం ధ్యాయేత్ సర్వవిఘ్నోపశాంతయే ||
+            </div>
+
+
+
+            <!-- <button class="btn-enter" id="btn-enter-invite">
+                <span>Enter Invitation</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button> -->
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       2. HERO SECTION & ANNOUNCEMENT (Maha Sankalpam)
+       ========================================================================== -->
+    <section id="hero-section">
+        <div class="container">
+            <div class="glass-card invitation-card reveal-element">
+                <div class="sacred-headers">
+                    <span class="sacred-word">శ్రీరస్తు</span>
+                    <span class="sacred-word">శుభమస్తు</span>
+                    <span class="sacred-word">అవిఘ్నమస్తు</span>
+                </div>
+                <!-- <span class="invitation-badge">Nischitartham</span> -->
+
+                <div class="family-banner">
+                    <h2 class="banner-telugu">ములికి వారి నిశ్చితార్థ ఆహ్వానము</h2>
+                    <p class="banner-english">(Muliki's Nischitaardha Aahvanamu)</p>
+                </div>
+
+                <h1 class="title-traditional main-title">ENGAGEMENT INVITATION</h1>
+
+                <!-- Kalasam SVG Divider -->
+                <svg class="divider-svg" viewBox="0 0 100 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 10,15 L 35,15 Q 50,22 65,15 L 90,15" stroke="#D4AF37" stroke-width="1.5" />
+                    <!-- Tiny Kalasam structure in center -->
+                    <circle cx="50" cy="15" r="5" fill="#D4AF37" />
+                    <path d="M47,20 L53,20 L52,23 L48,23 Z" fill="#D4AF37" />
+                    <path d="M 48,11 Q 50,7 52,11 Z" fill="#1E5631" />
+                    <!-- Tiny flowers -->
+                    <circle cx="35" cy="15" r="2.5" fill="#8D1C24" />
+                    <circle cx="65" cy="15" r="2.5" fill="#8D1C24" />
+                </svg>
+
+                <!-- Ring Exchange Animation Container -->
+                <div class="ring-exchange-container">
+                    <svg class="ring-exchange-svg" viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <!-- Metallic Gold Gradient -->
+                            <linearGradient id="ring-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#FFE082" />
+                                <stop offset="30%" stop-color="#D4AF37" />
+                                <stop offset="70%" stop-color="#B8860B" />
+                                <stop offset="100%" stop-color="#FFE082" />
+                            </linearGradient>
+
+                            <!-- Diamond Brilliant Shine Gradient -->
+                            <linearGradient id="ring-diamond" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#FFFFFF" />
+                                <stop offset="30%" stop-color="#E0F7FA" />
+                                <stop offset="75%" stop-color="#80DEEA" />
+                                <stop offset="100%" stop-color="#00ACC1" />
+                            </linearGradient>
+
+                            <!-- Soft glow filter -->
+                            <filter id="gold-glow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feGaussianBlur stdDeviation="3" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                        </defs>
+
+                        <!-- Background Aura Glow -->
+                        <circle cx="100" cy="50" r="18" fill="#FDB813" opacity="0" class="ring-glow-pulse"
+                            filter="url(#gold-glow)" />
+
+                        <!-- Sparkles Burst Group -->
+                        <g class="sparkles-burst">
+                            <!-- Top Sparkle -->
+                            <path d="M 100,22 Q 100,28 94,28 Q 100,28 100,34 Q 100,28 106,28 Q 100,28 100,22 Z"
+                                fill="#FFE082" />
+                            <!-- Bottom Sparkle -->
+                            <path d="M 100,66 Q 100,72 94,72 Q 100,72 100,78 Q 100,72 106,72 Q 100,72 100,66 Z"
+                                fill="#FFE082" />
+                            <!-- Left Sparkle -->
+                            <path d="M 68,46 Q 68,50 64,50 Q 68,50 68,54 Q 68,50 72,50 Q 68,50 68,46 Z"
+                                fill="#FFE082" />
+                            <!-- Right Sparkle -->
+                            <path d="M 132,46 Q 132,50 128,50 Q 132,50 132,54 Q 132,50 136,50 Q 132,50 132,46 Z"
+                                fill="#FFE082" />
+                            <!-- Micro White Sparkles -->
+                            <circle cx="82" cy="34" r="1.5" fill="#FFFFFF" />
+                            <circle cx="118" cy="62" r="1.5" fill="#FFFFFF" />
+                        </g>
+
+                        <!-- Groom's Ring (Left Band) -->
+                        <g class="ring-band ring-band-left">
+                            <ellipse cx="0" cy="0" rx="15" ry="15" fill="none" stroke="#8B6508" stroke-width="1.5" />
+                            <ellipse cx="0" cy="0" rx="17" ry="17" fill="none" stroke="url(#ring-gold)"
+                                stroke-width="3.5" />
+                            <ellipse cx="0" cy="0" rx="18.5" ry="18.5" fill="none" stroke="#FFFFFF" stroke-width="0.75"
+                                stroke-dasharray="6, 25" opacity="0.8" />
+                        </g>
+
+                        <!-- Bride's Ring (Right Band with Diamond) -->
+                        <g class="ring-band ring-band-right">
+                            <ellipse cx="0" cy="0" rx="15" ry="15" fill="none" stroke="#8B6508" stroke-width="1.5" />
+                            <ellipse cx="0" cy="0" rx="17" ry="17" fill="none" stroke="url(#ring-gold)"
+                                stroke-width="3.5" />
+                            <!-- Diamond Prongs / Setting -->
+                            <path d="M -2.5,-17 L -4.5,-20.5 L 4.5,-20.5 L 2.5,-17 Z" fill="#D4AF37" />
+                            <!-- Sparkling Diamond Facets -->
+                            <polygon points="-5,-20.5 5,-20.5 8,-24.5 0,-30.5 -8,-24.5" fill="url(#ring-diamond)"
+                                stroke="#FFFFFF" stroke-width="0.5" />
+                            <line x1="-8" y1="-24.5" x2="0" y2="-24.5" stroke="#FFFFFF" stroke-width="0.5"
+                                opacity="0.8" />
+                            <line x1="8" y1="-24.5" x2="0" y2="-24.5" stroke="#FFFFFF" stroke-width="0.5"
+                                opacity="0.8" />
+                            <line x1="0" y1="-30.5" x2="0" y2="-24.5" stroke="#FFFFFF" stroke-width="0.5"
+                                opacity="0.8" />
+                            <polyline points="-5,-20.5 0,-24.5 5,-20.5" fill="none" stroke="#FFFFFF" stroke-width="0.5"
+                                opacity="0.8" />
+                            <!-- Shine Dot -->
+                            <circle cx="-2" cy="-26.5" r="1.2" fill="#FFFFFF" opacity="0.9" />
+                        </g>
+                    </svg>
+                </div>
+
+                <p class="subtitle-traditional" style="font-size: 1.1rem; margin-bottom: 2rem;">
+                    With the divine blessings of our ancestors and almighty, <br>
+                    we cordially invite you to celebrate the engagement ceremony of our beloved
+                </p>
+
+                <div class="couple-names-wrapper">
+                    <div class="couple-name groom"><span class="salutation">Chi.</span> Sai Teja</div>
+                    <div class="ampersand">&amp;</div>
+                    <div class="couple-name bride"><span class="salutation">Chi. La. Sow.</span> Bhagya Sree</div>
+                </div>
+
+                <p class="event-brief">Subhamuhurtham on</p>
+                <div class="event-brief-date">Sunday, June 21, 2026 <br> 11:30 AM</div>
+
+                <p class="subtitle-traditional" style="color: var(--turmeric-yellow); font-weight: 500;">
+                    Please grace the occasion with your esteemed presence and blessings.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       3. COUNTDOWN TO SUBHAMUHURTHAM (Kala Gamanam)
+       ========================================================================== -->
+    <section id="countdown-section">
+        <div class="container reveal-element" style="display: flex; flex-direction: column; align-items: center;">
+            <h2 class="title-traditional" style="font-size: 1.8rem;">Auspicious Time Countdown</h2>
+            <!-- <p class="subtitle-traditional" style="margin-top: 0.5rem;">Counting down to the Subhamuhurtham</p> -->
+
+            <div class="countdown-wrapper">
+                <div class="countdown-box">
+                    <div class="countdown-value" id="days">00</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-value" id="hours">00</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-value" id="minutes">00</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-value" id="seconds">00</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       4. THE BRIDE & GROOM (Vadhuvu & Varudu)
+       ========================================================================== -->
+    <section id="couple-section">
+        <div class="container">
+            <h2 class="title-traditional">The Bride &amp; The Groom</h2>
+            <p class="subtitle-traditional">Introducing the Happy Couple</p>
+
+            <!-- Traditional Muggu/Kolam divider -->
+            <svg class="divider-svg" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10,10 C20,2 30,18 40,10 C50,2 60,18 70,10 C80,2 90,18 100,10" stroke="#D4AF37"
+                    stroke-width="1" stroke-dasharray="3,3" />
+                <circle cx="50" cy="10" r="3" fill="#8D1C24" />
+            </svg>
+
+            <div class="couple-cards-container">
+                <!-- Groom Card -->
+                <div class="glass-card couple-card reveal-element">
+                    <div class="couple-img-wrapper">
+                        <!-- Customizable Placeholder Image -->
+                        <img class="couple-img" src="assets/images/groom_placeholder.png" alt="Groom: Sai Teja">
+                    </div>
+
+                    <span class="traditional-prefix">Chi.</span>
+                    <h3 class="couple-card-name">Sai Teja</h3>
+
+                    <div class="family-details">
+                        <h4 class="family-title">Parents</h4>
+                        <p class="family-name">Sri Muliki Srinivas</p>
+                        <p class="family-name">Smt. Muliki Hema</p>
+                    </div>
+                </div>
+
+                <!-- Bride Card -->
+                <div class="glass-card couple-card reveal-element">
+                    <div class="couple-img-wrapper">
+                        <!-- Customizable Placeholder Image -->
+                        <img class="couple-img" src="assets/images/bride_placeholder.png" alt="Bride: Bhagya Sree">
+                    </div>
+
+                    <span class="traditional-prefix">Chi. La. Sow.</span>
+                    <h3 class="couple-card-name">Bhagya Sree</h3>
+
+                    <div class="family-details">
+                        <h4 class="family-title">Parents</h4>
+                        <p class="family-name">Sri Allada Veera Venkata Satyanarayana</p>
+                        <p class="family-name">Smt. Allada Naga Lakshmi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==========================================================================
+       6. VENUE & MAPS (Kalyana Mandapam)
+       ========================================================================== -->
+    <section id="venue-section">
+        <div class="container">
+            <h2 class="title-traditional">Venue &amp; Directions</h2>
+
+            <svg class="divider-svg" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="10" r="2" fill="#D4AF37" />
+                <circle cx="50" cy="10" r="4" fill="#D4AF37" />
+                <circle cx="70" cy="10" r="2" fill="#D4AF37" />
+                <path d="M 10,10 L 90,10" stroke="#D4AF37" stroke-width="0.5" stroke-dasharray="4,4" />
+            </svg>
+
+            <div class="venue-grid">
+                <!-- Embedded Google Map -->
+                <div class="map-container reveal-element">
+                    <!-- Standard high-quality responsive Google Maps Embed -->
+                    <iframe class="map-iframe"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.487842618956!2d78.38421067586523!3d17.436329401391515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93e46c72df63%3A0xe5a3c9451af1743f!2sShilpakala%20Vedika!5e0!3m2!1sen!2sin!4v1716715694294!5m2!1sen!2sin"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+                <!-- Venue Address Details -->
+                <div class="venue-details-card reveal-element">
+                    <h3 class="venue-hall-name">Shilpakala Vedika</h3>
+                    <p class="venue-address">
+                        Hitech City Main Road, Jubilee Enclave,<br>
+                        Madhapur, Hyderabad, Telangana 500081<br><br>
+                        <strong>Landmark:</strong> Opposite Cyber Towers, Madhapur Metro Station.
+                    </p>
+
+                    <a href="https://maps.app.goo.gl/r6aXJc9451af1743f" target="_blank" class="btn-nav">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Get Directions on Google Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       7. RSVP SECTION (Aahwanam)
+       ========================================================================== -->
+    <section id="rsvp-section">
+        <div class="container">
+            <div class="glass-card rsvp-card reveal-element">
+                <h2 class="title-traditional">RSVP &amp; Blessings</h2>
+
+                <svg class="divider-svg" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 20,10 L 80,10" stroke="#D4AF37" stroke-width="1" />
+                    <polygon points="50,5 55,10 50,15 45,10" fill="#D4AF37" />
+                </svg>
+
+                <!-- Success State Overlay -->
+                <div class="form-success-message" id="form-success">
+                    <!-- Custom SVG Kalasam for Success -->
+                    <svg class="success-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Pot (Kalasam) -->
+                        <path d="M25 55 C25 65 30 70 40 70 C50 70 55 65 55 55 C55 45 45 42 40 42 C35 42 25 45 25 55 Z"
+                            fill="#D4AF37" />
+                        <!-- Neck of the pot -->
+                        <path d="M32 42 L48 42 L45 38 L35 38 Z" fill="#FFE082" />
+                        <!-- Coconut -->
+                        <path d="M34 38 Q40 25 46 38 Z" fill="#8D1C24" />
+                        <!-- Mango Leaves -->
+                        <path d="M28 38 Q33 28 37 38 M43 38 Q47 28 52 38" stroke="#1E5631" stroke-width="2"
+                            fill="none" />
+                        <!-- Sacred Thread decoration -->
+                        <path d="M25 55 Q40 58 55 55" stroke="#8D1C24" stroke-width="1.5" />
+                        </g>
+                    </svg>
+                    <h3 class="success-title">Dhanyavadalu!</h3>
+                    <p class="success-text">
+                        Thank you for your RSVP and blessings. <br>
+                        We look forward to welcoming you!
+                    </p>
+                </div>
+
+                <!-- Active RSVP Form -->
+                <form class="rsvp-form" id="rsvp-invitation-form">
+                    <div class="form-group">
+                        <label class="form-label" for="guest-name">Your Full Name</label>
+                        <input class="form-input" type="text" id="guest-name" required placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label class="form-label" for="attendance">Will You Attend?</label>
+                            <div class="attendance-options">
+                                <label class="attendance-option">
+                                    <input type="radio" name="attendance-status" value="joyfully-accept" checked
+                                        required>
+                                    <div class="attendance-option-card">Yes, I'll Be There</div>
+                                </label>
+                                <label class="attendance-option">
+                                    <input type="radio" name="attendance-status" value="regretfully-decline">
+                                    <div class="attendance-option-card">Decline Warmly</div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="guest-count">Number of Guests</label>
+                            <select class="form-input" id="guest-count" required>
+                                <option value="1" selected>1 Person</option>
+                                <option value="2">2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                                <option value="5+">5+ People</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="guest-message">Blessings / Message to the Couple</label>
+                        <textarea class="form-input" id="guest-message" placeholder="Write your warm wishes here..."
+                            rows="4"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Submit RSVP</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer cultural line -->
+    <!-- <footer
+        style="padding: 2.5rem 0; text-align: center; border-top: 1px solid rgba(212, 175, 55, 0.15); background-color: #080102; z-index: 2; position: relative;">
+        <p class="subtitle-traditional" style="font-size: 0.8rem; letter-spacing: 2px;">
+            SAMPRADAYAME SHARANAM - CELEBRATING TRADITIONAL ROOTS
+        </p>
+        <p style="font-size: 0.75rem; color: #7f6e5c; margin-top: 0.5rem; letter-spacing: 1px;">
+            &copy; 2026 Sai Teja &amp; Bhagya Sree. Made with love for family &amp; friends.
+        </p>
+    </footer> -->
+
+    <!-- Link to JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
