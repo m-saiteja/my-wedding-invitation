@@ -416,17 +416,15 @@
                                 <!-- Bottom Chassis Plate -->
                                 <rect x="1.5" y="15.5" width="18" height="1.5" rx="0.3" />
 
-                                <!-- Large Driving Wheels (with cutouts using fill-rule="evenodd") -->
+                                <!-- Driving Wheels (with cutouts using fill-rule="evenodd") -->
                                 <path
                                     d="M 5.5,15 A 2.5,2.5 0 1 0 5.5,20 A 2.5,2.5 0 1 0 5.5,15 Z M 5.5,16.5 A 1,1 0 1 1 5.5,18.5 A 1,1 0 1 1 5.5,16.5 Z"
                                     fill-rule="evenodd" />
                                 <path
                                     d="M 11,15 A 2.5,2.5 0 1 0 11,20 A 2.5,2.5 0 1 0 11,15 Z M 11,16.5 A 1,1 0 1 1 11,18.5 A 1,1 0 1 1 11,16.5 Z"
                                     fill-rule="evenodd" />
-
-                                <!-- Small Front Wheel -->
                                 <path
-                                    d="M 16.5,16 A 1.5,1.5 0 1 0 16.5,19 A 1.5,1.5 0 1 0 16.5,16 Z M 16.5,17 A 0.5,0.5 0 1 1 16.5,18 A 0.5,0.5 0 1 1 16.5,17 Z"
+                                    d="M 16.5,15 A 2.5,2.5 0 1 0 16.5,20 A 2.5,2.5 0 1 0 16.5,15 Z M 16.5,16.5 A 1,1 0 1 1 16.5,18.5 A 1,1 0 1 1 16.5,16.5 Z"
                                     fill-rule="evenodd" />
                             </svg>
                             <div class="travel-details">
@@ -434,8 +432,8 @@
                                 <span class="travel-value">Rajahmundry Railway Station (RJY)</span>
                             </div>
                         </a>
-                        <a href="https://www.google.com/maps/dir/?api=1&origin=Rajahmundry+Airport&destination=Dowleswaram,+Andhra+Pradesh" target="_blank"
-                            class="travel-item">
+                        <a href="https://www.google.com/maps/dir/?api=1&origin=Rajahmundry+Airport&destination=Dowleswaram,+Andhra+Pradesh"
+                            target="_blank" class="travel-item">
                             <svg class="travel-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"
                                 aria-hidden="true" focusable="false">
                                 <!-- Runway (Ground line) -->
@@ -569,6 +567,30 @@
             </div>
         </div>
     </section>
+
+    <!-- Background Music Audio Element -->
+    <audio id="bgm-audio" src="assets/audio/bgm.m4a" loop preload="auto">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Floating Music Player Widget -->
+    <div class="music-player-widget" id="music-player">
+        <span class="music-player-text" id="music-status-text">Play Music</span>
+        <div class="music-waveform">
+            <span class="music-wave-bar"></span>
+            <span class="music-wave-bar"></span>
+            <span class="music-wave-bar"></span>
+            <span class="music-wave-bar"></span>
+        </div>
+        <div class="music-disc-container">
+            <svg class="music-disc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+            </svg>
+            <div class="music-disc">
+                <div class="music-disc-inner"></div>
+            </div>
+        </div>
+    </div>
 
     <!-- Link to JavaScript -->
     <script src="script.js"></script>

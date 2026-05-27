@@ -281,4 +281,79 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // --- 6. Background Music Control (Mild Peaceful Volume) ---
+    const bgmAudio = document.getElementById('bgm-audio');
+    const musicPlayer = document.getElementById('music-player');
+    const musicStatusText = document.getElementById('music-status-text');
+
+    if (bgmAudio && musicPlayer) {
+        // Keep track of our explicit intended playback state
+        let isPlaying = false;
+
+        // Set volume to a peaceful, very mild level (e.g. 0.15 out of 1.0)
+        bgmAudio.volume = 0.15;
+        
+        // Force the audio to load immediately
+        bgmAudio.load();
+
+        // Toggle Music on click
+        musicPlayer.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent bubbling up to document autoplay trigger
+            if (!isPlaying) {
+                playAudio();
+            } else {
+                pauseAudio();
+            }
+        });
+
+        function playAudio() {
+            bgmAudio.play()
+                .then(() => {
+                    isPlaying = true;
+                    musicPlayer.classList.add('playing');
+                    if (musicStatusText) musicStatusText.innerText = "Pause Music";
+                    removeInteractionListeners();
+                })
+                .catch(err => {
+                    console.log("Audio play failed:", err);
+                });
+        }
+
+        function pauseAudio() {
+            bgmAudio.pause();
+            isPlaying = false;
+            musicPlayer.classList.remove('playing');
+            if (musicStatusText) musicStatusText.innerText = "Play Music";
+        }
+
+        // Autoplay fallback on user interaction
+        const handleAutoplay = () => {
+            if (!isPlaying) {
+                playAudio();
+            }
+        };
+
+        const removeInteractionListeners = () => {
+            document.removeEventListener('click', handleAutoplay);
+            document.removeEventListener('touchstart', handleAutoplay);
+            document.removeEventListener('mousedown', handleAutoplay);
+            document.removeEventListener('keydown', handleAutoplay);
+        };
+
+        // 1. Try to play immediately (some browsers/configurations allow it)
+        bgmAudio.play()
+            .then(() => {
+                isPlaying = true;
+                musicPlayer.classList.add('playing');
+                if (musicStatusText) musicStatusText.innerText = "Pause Music";
+            })
+            .catch(() => {
+                // 2. Fallback: listen to the first user gesture
+                document.addEventListener('click', handleAutoplay);
+                document.addEventListener('touchstart', handleAutoplay);
+                document.addEventListener('mousedown', handleAutoplay);
+                document.addEventListener('keydown', handleAutoplay);
+            });
+    }
 });
